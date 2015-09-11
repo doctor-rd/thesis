@@ -1,0 +1,246 @@
+\documentclass{elsarticle}
+\usepackage{amsmath,amsthm}
+\usepackage{bbm}
+\usepackage[all,cmtip]{xy}
+\usepackage{graphicx}
+\usepackage{color}
+\newtheorem{df}{Definition}[section]
+\newtheorem{prop}[df]{Proposition}
+\newtheorem{lem}[df]{Lemma}
+\newtheorem{thm}[df]{Theorem}
+\newtheorem{rem}[df]{Remark}
+\def\N{\mathbbm N}
+\def\Z{\mathbbm Z}
+\def\R{\mathbbm R}
+\def\id{\textrm{id}}
+\def\im{\textrm{im}}
+\journal{Topology and its Applications}
+\begin{document}
+\begin{frontmatter}
+\title{On a quotient topology of the partition lattice with forbidden block sizes}
+\author[ruelle]{Ralf Donau}
+\address[ruelle]{Fachbereich Mathematik, Universit\"at Bremen, Bibliothekstra\ss e 1, 28359 Bremen, Germany}
+\ead{ruelle@math.uni-bremen.de}
+\begin{abstract}
+In this paper we consider subtrisps of $\Delta(\Pi_n)/S_1\times S_{n-1}$, that we obtain by forbidding certain block sizes, and determine their homotopy type, as well as bases of their cohomology. Our arguments make use of trisp closure maps, which were introduced by Kozlov. A similar result, where $\Delta(\Pi_n)/S_n$ is considered, has already been solved by Kozlov.
+\end{abstract}
+\begin{keyword}
+Discrete Morse Theory\sep Regular trisp\sep Young subgroup\sep Trisp closure map
+\end{keyword}
+\end{frontmatter}
+\section{Introduction}
+Let $n>k\geq 2$ and let $\Pi_n$ denote the poset consisting of all partitions of $[n]:=\{1,\dots,n\}$ ordered by refinement, such that the finer partition is the smaller partition. Let $\Pi_{n,k}$ denote the poset obtained from $\Pi_n$ by removing both the smallest and greatest element, which are $\{\{1\},\dots,\{n\}\}$ and $\{[n]\}$, respectively, and all partitions where some block has more than $1$ and less than $k$ elements. We consider $\Pi_{n,k}$ as a category, which is acyclic, and define $\Delta(\Pi_{n,k})$ to the nerve of the acyclic category $\Pi_{n,k}$, which is a regular trisp, see \cite[Chapter 10]{buch}. Since $\Pi_{n,k}$ is a geometric lattice, $\Delta(\Pi_{n,k})$ is shellable, hence homotopy equivalent to a wedge of spheres, see \cite{bjoern}.
+
+The symmetric group $S_n$ operates on $\Delta(\Pi_{n,k})$ in a natural way. We consider quotients $\Delta(\Pi_{n,k})/G$, where $G\subset S_n$ is a subgroup. The following theorem is the first result concerning the topology of such a quotient, where $G$ is a non-trivial subgroup of $S_n$.
+\begin{thm}[Kozlov \cite{kozthm}]
+Let $n>k\geq 2$, then $\Delta(\Pi_{n,k})/S_n$ is collapsible.
+\end{thm}
+In this paper we study the case, where $G$ is the Young subgroup $S_1\times S_{n-1}:=\{\sigma\in S_n\mid\sigma(1)=1\}$. We will use the following result, which gives an answer for the special case $k=2$, in the proof of our main result which is stated in Proposition \ref{mainresult}.
+\begin{thm}[Donau \cite{donau}]
+\label{rdthm}
+Let $n\geq3$, then the topological space $\Delta(\Pi_{n,2})/S_1\times S_{n-1}$ is homotopy equivalent to a sphere of dimension $n-3$.
+\end{thm}
+A more general version of Theorem \ref{rdthm}, where arbitrary subgroups of $S_1\times S_{n-1}$ are considered, can be found in \cite{donau}.
+\section{Closure maps on regular trisps and Discrete Morse Theory}
+The definitions of regular trisps, acyclic matchings and foundations of Discrete Morse Theory can be found in \cite{forman}, \cite{clmap} and \cite{buch}.
+\begin{thm}%[Main Theorem of Discrete Morse Theory for CW Complexes]
+\label{morsemain}
+Let $\Delta$ be a regular trisp and let $M$ be an acyclic matching on the poset ${\cal F}(\Delta)\setminus\{\hat{0}\}$. If the critical simplices form a subcomplex $\Delta_c$ of $\Delta$, then $\Delta$ collapses onto $\Delta_c$.
+\end{thm}
+The proof of Theorem \ref{morsemain} as well as further facts on Discrete Morse Theory can be found in \cite[Chapter 11]{buch}.
+
+For a trisp $\Delta$ we denote the face poset by ${\cal F}(\Delta)$ and by $V(\Delta)$ we denote the set of vertices of $\Delta$. For a simplex $\sigma\in\Delta$, $V(\sigma)$ denotes the set of vertices of $\sigma$.
+
+Let $\Delta$ be a regular trisp whose set of vertices is divided into two disjoint parts $B\cup R$. We call the vertices of $B$ the \emph{blue} vertices and the vertices of $R$ the \emph{red} vertices. Let $\Delta^R$ be the subtrisp of $\Delta$ that contains all simplices $\sigma\in{\cal F}(\Delta^R)$ with $V(\sigma)\subset R$. For $\sigma\in{\cal F}(\Delta)\setminus{\cal F}(\Delta^R)$ let $m(\sigma)$ denote the smallest blue vertex of $\sigma$.
+\begin{df}
+A map $\varphi:B\longrightarrow R$ is called a \emph{closure map} if for any $\sigma\in{\cal F}(\Delta)\setminus{\cal F}(\Delta^R)$ either $m(\sigma)\in V(\sigma)$ or $m(\sigma)$ can be uniquely inserted into $\sigma$, i.e. there exists a unique simplex $\tau\in{\cal F}(\Delta)$ with $m(\sigma)\in V(\tau)$ and $\sigma$ is a subsimplex of $\tau$ with $\dim\tau=\dim\sigma+1$.
+\end{df}
+\begin{thm}[Kozlov \cite{clmap}]
+\label{clthm}
+Let $\Delta$ be a regular trisp whose set of vertices is divided into two disjoint parts $B\cup R$. Assume we have a closure map $\varphi:B\longrightarrow R$, then there exists an acyclic matching on ${\cal F}(\Delta)$ such that a simplex $\sigma\in{\cal F}(\Delta)$ is critical if and only if $\sigma\in{\cal F}(\Delta^R)$. In particular $\Delta$ collapses onto its subtrisp $\Delta^R$.
+\end{thm}
+\begin{rem}
+\label{coll}
+If a trisp $\Delta$ collapses onto a subtrisp $\Delta'$, then $\Delta$ is homotopy equivalent to $\Delta'$. If $\Delta'$ consists of one vertex, we call $\Delta$ \emph{collapsible}.
+\end{rem}
+\section{The main result}
+Let $n\geq 3$ and $2\leq k<n$ be a fixed natural numbers throughout this section.
+
+The simplices of $\Delta(\Pi_{n,k})/S_1\times S_{n-1}$ are represented by sequences of partitions, where the partitions refine each other. Such a sequence can be considered as a leveled forest, where each level corresponds to a partition. Each node on a particular level corresponds to a block of the corresponding partition in the sequence. Now we modify such a forest as follows. We replace each node, which is a subset of $[n]$, by its cardinality and put a mark onto the number if this subset contains $1$. It is easy to see that the simplices of $\Delta(\Pi_{n,k})/S_1\times S_{n-1}$ can be indexed with such forests. The vertices can be indexed with number partitions, which we may write as $v_0\oplus v_1+\dots+v_r$, of $n$ that distinguish the first number, i.e. $\oplus$ is non-commutative. The number on the left side of $\oplus$, that is $v_0$, corresponds to the block that contains $1$. We call this number the \emph{number on the left side}. All other numbers are on the right side. The boundary operators are obtained by deleting entire levels from forests and reconnecting vertices transitively through the deleted levels.
+\begin{figure}[ht]
+\centering
+\input{forest.pdf_t} 
+\caption{A simplex of $\Delta(\Pi_{6,3})/S_1\times S_5$. One number is distinguished on each level.}
+\end{figure}
+
+Let $\Delta_{n,k}$ denote the subtrisp of $\Delta(\Pi_{n,k})/S_1\times S_{n-1}$ where all vertices are indexed with number partitions of the type
+\[v_0\oplus k^c+1^{n-v_0-ck}:=v_0\oplus\underbrace{k+\dots+k}_\text{$c$ times}+\underbrace{1+\dots+1}_\text{$n-v_0-ck$ times}\]
+with $v_0\equiv 0,1\mod k$.
+\begin{lem}
+\label{erste_closure}
+The trisp $\Delta(\Pi_{n,k})/S_1\times S_{n-1}$ is homotopy equivalent to $\Delta_{n,k}$.
+\end{lem}
+Some parts of the argument are similar to the proof of Corollary 2.3 in \cite{clmap}.
+\begin{proof}
+We call the vertices of $\Delta_{n,k}$ the red vertices of $\Delta(\Pi_{n,k})/S_1\times S_{n-1}$. Let $R$ denote the set of the red vertices and $B$ the set of all other vertices of $\Delta$ that are blue. We define a closure map $\varphi:B\longrightarrow R$ as follows. Let $b=b_0\oplus b_1+\dots+b_r\in B$ be a blue vertex. We refine the blocks of $b$ as follows. $b_0$ remains unchanged for $b_0\equiv 0,1\mod k$. If we have $b_0\equiv a\mod k$ with $a=2,\dots,k-1$, we replace the block $b_0$ by the blocks $(b_0-a+1)\oplus1^{a-1}$. For $i\not=0$, each $b_i$ is replaced as follows. We write $b_i$ as a sum of $k$'s and $1$'s such that we maximize the number of $k$'s.
+
+We have to show that $\varphi$ is a closure map. Let $\sigma$ be a simplex with smallest blue vertex $m(\sigma)=m_0\oplus m_1+\dots+m_r$ and assume $\varphi(m(\sigma))$ is not a vertex of $\sigma$. We have to construct a forest $\tau$ such that $\varphi(m(\sigma))$ is a vertex of $\tau$ and $\sigma$ can be obtained from $\tau$ by deleting a level, in our case this is the vertex $\varphi(m(\sigma))$. If $m(\sigma)$ is the smallest vertex of $\sigma$, then clearly $\varphi(m(\sigma))$ can be appended uniquely below $m(\sigma)$. Assume we have red vertices $r^1,\dots,r^t\in V(\sigma)$ that are smaller than $m(\sigma)$, where $r^t$ is the greatest vertex with this property. We start with the subsimplex of $\sigma$ that we obtain by deleting the vertices $r^1,\dots,r^t$. Then, as we have seen above, $\varphi(m(\sigma))$ can be appended below $m(\sigma)$. Now we append $r^t$ below $\varphi(m(\sigma))$ as follows. First we consider the number $m_0$ on the left side of $m(\sigma)$. If we have $b_0\equiv a\mod k$ with $a=2,\dots,k-1$, then this number has exactly $a-1$ children which are $1$'s on the right side of $\varphi(m(\sigma))$. If we look at $\sigma$ we see that this number has at least $a-1$ children which are $1$'s on the right side of $r^t$. We let $a-1$ of these $1$'s in $r$ become children of the corresponding $1$'s in $\varphi(m(\sigma))$ and the other $1$'s become children of the number on the left side of $\varphi(m(\sigma))$. For $b_0\equiv 0,1\mod k$, the number $m_0$ has exactly one child. We let the children of $m_0$ become the children of the number on the left side of $\varphi(m(\sigma))$. Now we let $m_i$ be a number on the right side of $m(\sigma)$. In $r^t$, this number is refined into $k$'s and $1$'s but we do not necessarily have maximized the number of $k$'s. These numbers become children of the corresponding number in $\varphi(m(\sigma))$ where the number of $k$'s is maximized. At the end we append the remaining children $r^1,\dots,r^{t-1}$ in the same way as in $\sigma$. The uniqueness can be easily verified. Now we can apply Theorem \ref{clthm} and Remark \ref{coll}.
+\end{proof}
+\begin{lem}
+\label{rdanwendung}
+The trisp $\Delta_{n,2}$ is homotopy equivalent to a sphere of dimension $n-3$.
+\end{lem}
+\begin{proof}
+Apply Lemma \ref{erste_closure} and Theorem \ref{rdthm}.
+\end{proof}
+\begin{figure}[ht]
+\centering
+\input{S1.pdf_t}
+\caption{$\Delta_{4,2}$ as a circle, where $v_1=2\oplus2$, $v_2=1\oplus 2+1$, $v_3=2\oplus 1 +1$, $v_4=3\oplus 1$.}
+\end{figure}
+
+Now assume $n\equiv 0,1\mod k$. Each vertex of $\Delta_{n,k}$ can be written as
+\[(ak+b)\oplus k^c+1^{n-ak-b-ck}\]
+with $b\in\{0,1\}$, $a,b,c\in\Z$, $a,b,c\geq 0$, $a+b>0$, $a+c>0$, $ak+b+ck\leq n$ and $ak+b<n$ such that $(a,b,c)$ is unique. The two last inequalities can be rewritten as $0<a+c\leq\frac nk-\frac bk$ and $a<\frac nk-\frac bk$. Now we would like to eliminate $\frac bk$ from these inequalities. For $n\equiv 0\mod k$ we have
+\begin{eqnarray*}
+a+c\leq\frac nk-\frac bk&\Leftrightarrow&a+c\leq\frac nk-b\\
+a<\frac nk-\frac bk&\Leftrightarrow&a<\frac nk
+\end{eqnarray*}
+and for $n\equiv 1\mod k$ we have
+\begin{eqnarray*}
+a+c\leq\frac nk-\frac bk&\Leftrightarrow&a+c\leq\frac {n-1}k\\
+a<\frac nk-\frac bk&\Leftrightarrow&a<\frac {n-1}k+1-b
+\end{eqnarray*}
+Hence in the case $n\equiv 0\mod k$ the set of tuples $(a,b,c)$ only depends on $\frac nk$ and in the case $n\equiv 1\mod k$ this set only depends on $\frac {n-1}k$. In particular the number of vertices of $\Delta_{n,k}$ only depends on these numbers.
+\begin{lem}
+\label{trispiso}
+Let $n_i\geq3$ and $2\leq k_i<n_i$ for $i=1,2$. Assume $n_i\equiv 0\mod k_i$ or $n_i\equiv 1\mod k_i$, and assume $\frac{n_1}{k_1}=\frac{n_2}{k_2}$ or $\frac{n_1-1}{k_1}=\frac{n_2-1}{k_2}$, respectively. Then the trisps $\Delta_{n_1,k_1}$ and $\Delta_{n_2,k_2}$ are isomorphic, in particular homotopy equivalent.
+\end{lem}
+\begin{proof}
+We obtain the canonical bijection
+\begin{eqnarray*}
+\varphi:V(\Delta_{n_1,k_1})&\longrightarrow&V(\Delta_{n_2,k_2})\\
+(ak_1+b)\oplus k_1^c+1^{n_1-ak_1-b-ck_1}&\longmapsto&(ak_2+b)\oplus k_2^c+1^{n_2-ak_2-b-ck_2}
+\end{eqnarray*}
+We also obtain a bijection between ${\cal F}(\Delta_{n_1,k_1})$ and ${\cal F}(\Delta_{n_2,k_2})$ as follows. Let $\sigma\in{\cal F}(\Delta_{n_1,k_1})$ be a simplex, which is a forest. First, we remove all $1$'s from the tree which are blocks on the right side. Second, on the right side we replace each $k_1$ by $k_2$, on the left side we replace $ak_1+b$ by $ak_2+b$. The last step is: We add $1$'s to each level such that the sum over all numbers is $n_2$ and such that they become children of those blocks which do not have enough children. The last step is well-defined. It is easy to see that $\varphi$ is a trisp isomorphism.
+\begin{figure}[ht]
+\centering
+\input{mapping.pdf_t} 
+\caption{Example for the trisp isomorphism}
+\end{figure}
+\end{proof}
+\begin{prop}
+\label{mainresult}
+Let $n\geq3$ and $2\leq k<n$, then the topological space $\Delta(\Pi_{n,k})/S_1\times S_{n-1}$ is
+\begin{enumerate}
+\item collapsible for $n\not\equiv 0,1\mod k$.
+\item homotopy equivalent to a sphere of dimension $\frac{2n}k-3$ for $n\equiv 0\mod k$.
+\item homotopy equivalent to a sphere of dimension $\frac{2(n-1)}k-2$ for $n\equiv 1\mod k$.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+Since $\Delta(\Pi_{n,k})/S_1\times S_{n-1}$ is homotopy equivalent to $\Delta_{n,k}$ by Lemma \ref{erste_closure}, we may consider $\Delta_{n,k}$.
+
+Assume we have  $n\equiv 2,\dots,k-1\mod k$. Let $v=v_0\oplus k^c+1^{n-v_0-ck}$ be a vertex of $\Delta_{n,k}$, then we have $v_0\equiv 0,1\mod k$. This implies $n-v_0\equiv 1,\dots,k-1\mod k$, in particular $n-v_0-ck\not\equiv 0\mod k$. Hence each vertex has a $1$ on the right side and $(n-1)\oplus 1$ can be uniquely inserted into each simplex of $\Delta_{n,k}$. We define a closure map where $(n-1)\oplus 1$ is the only red vertex and apply Theorem \ref{clthm}.
+
+In the case $n\equiv 0\mod k$ we set $n_2:=\frac{2n}k$, then $\Delta_{n,k}$ is isomorphic to $\Delta_{n_2,2}$ by Lemma \ref{trispiso}, since $\frac nk=\frac{n_2}2$. In the case $n\equiv 1\mod k$ we set $n_2:=\frac{2(n-1)}k+1$, then $\Delta_{n,k}$ is isomorphic to $\Delta_{n_2,2}$ by Lemma \ref{trispiso}, since $\frac {n-1}k=\frac{n_2-1}2$. Lemma \ref{rdanwendung} completes the proof.
+\end{proof}
+\section{A basis of the cohomology}
+Let $n\geq3$, $2\leq k<n$ and $n\equiv 0,1\mod k$. Then $\Delta:=\Delta(\Pi_{n,k})/S_1\times S_{n-1}$ is homotopy equivalent to a sphere of some dimension $l$ by Proposition \ref{mainresult}. We clearly have 
+\[
+H^i(\Delta)\cong
+\begin{cases}
+\Z&\text{for $i=0$}\\
+\Z&\text{for $i=l$}\\
+0&\text{else}
+\end{cases}
+\]
+$H^i(\Delta)$ denotes the $i$th cohomology of $\Delta$ with coefficients in $\Z$. Now we wish to give an element that generates the top cohomology group $H^l(\Delta)$. Let $(C_*,\partial_*)$ denote the chain complex of the trisp $\Delta$ with coefficients in $\Z$, see \cite[Chapter 3]{buch}. Then for each $i>0$, $\partial_i:C_i\longrightarrow C_{i-1}$ is defined as follows. Let $\tau$ be a simplex of dimension $i$, then we have $\partial_i(\tau)=\sum_{i=1}^{i+1}(-1)^{i+1}B_i(\tau)$. Here $B_i(\tau)$ denotes that subsimplex of $\tau$, that is obtained by removing the vertex on the $i$th level. A detailed description of $B_i$ can be found in \cite{buch}.
+
+We consider the cochain complex of $\Delta$ at the $l$th position, see \cite[Section 3.1]{hatcher}:
+\[
+\xymatrix{
+\dots&\hom(C_{l+1},\Z)\ar[l]&\hom(C_l,\Z)\ar[l]_{\partial^*}&\hom(C_{l-1},\Z)\ar[l]_{\partial^{**}}&\dots\ar[l]
+}
+\]
+We give is a short description of $\partial^*$. Let $\tau$ be simplex of dimension $l+1$.
+\[
+(\partial^*f)(\tau)=\sum_{i=1}^{l+2}(-1)^{i+1}f(B_i(\tau))
+\]
+$H^l(\Delta)$ is defined as $H^l(\Delta):=\ker\partial^*/\im\partial^{**}$.
+
+We define the following subsets of $V(\Delta)$ which are pairwise disjoint.
+\begin{eqnarray*}
+S_{n,k}&:=&\left\{ak\oplus 1^{n-ak}\mid 1\leq a<\frac nk\right\}\\
+T_{n,k}^a&:=&\{(ak+b)\oplus 1^{n-ak-b}\mid b=1,\dots,k-1\}\\
+&\text{for}&1\leq a<\frac {n-1}k
+\end{eqnarray*}
+
+We define a homomorphism $\rho_{n,k}\in\hom(C_l,\Z)$ as follows. $C_l$ is generated by the simplices of dimension $l$. Let $\tau\in C_l$ be a simplex of dimension $l$. We set $\rho_{n,k}(\tau)=1$ if $S_{n,k}\subset V(\tau)$ and $T_{n,k}^a\cap V(\tau)\not=\emptyset$ for all $1\leq a<\frac {n-1}k$. We set $\rho_{n,k}(\tau)=0$ otherwise.
+\begin{lem}
+\label{cocycle}
+The homomorphism $\rho_{n,k}$ is a cocycle, i.e. $\partial^*\rho_{n,k}=0$.
+\end{lem}
+\begin{proof}
+Let $\tau\in C_{l+1}$ be a simplex of dimension $l+1$. Assume $S_{n,k}$ is not contained in $V(\tau)$ or  $T_{n,k}^a\cap V(\tau)$ is empty for some $1\leq a<\frac {n-1}k$, then this also holds for each subsimplex of $\tau$, hence $(\partial^*\rho_{n,k})(\tau)=0$.
+
+Now assume $S_{n,k}\subset V(\tau)$ and $T_{n,k}^a\cap V(\tau)\not=\emptyset$ for all $1\leq a<\frac {n-1}k$. Notice that $\tau$ has $l+2$ vertices. We have $|T_{n,k}^a\cap V(\tau)|\leq 2$ for all $1\leq a<\frac {n-1}k$ and $|T_{n,k}^a\cap V(\tau)|=2$ for at most one $a$ by the following calculation. First we consider the case $n\equiv 0\mod k$. Then we have $l=\frac{2n}k-3$ and $|S_{n,k}|=\frac nk-1$.
+\[
+\frac{2n}k-2=\frac nk-1+\frac nk-1\leq |S_{n,k}|+\sum_{a=1}^{\frac nk-1}|T_{n,k}^a\cap V(\tau)|\leq l+2=\frac{2n}k-1
+\]
+In the case $n\equiv 1\mod k$ we have $l=\frac{2(n-1)}k-2$ and $|S_{n,k}|=\frac {n-1}k$.
+\[
+\frac{2(n-1)}k-1=\frac {n-1}k+\frac {n-1}k-1\leq |S_{n,k}|+\sum_{a=1}^{\frac {n-1}k-1}|T_{n,k}^a\cap V(\tau)|\leq l+2=\frac{2(n-1)}k
+\]
+Now it is easy to see that $(\partial^*\rho_{n,k})(\tau)=0$.
+\end{proof}
+\begin{lem}
+\label{nicematching}
+Let $n\geq3$, then there exists an acyclic matching on the poset ${\cal F}(\Delta(\Pi_{n,2})/S_1\times S_{n-1})$, where the set of critical simplices consists of one critical simplex of dimension $0$ and the unique simplex $\sigma_n$ of dimension $n-3$ which has the vertices $v_0\oplus 1^{n-v_0}$ with $v_0=2,\dots,n-1$.
+\end{lem}
+This proof may be considered as a simplified version of the proof of Proposition 4.2 in \cite{donau}. Lemma \ref{nicematching} implies Theorem \ref{rdthm} by the Main Theorem of Discrete Morse Theory\footnote{See \cite[Chapter 11]{buch}}.
+\begin{proof}
+For $n=3$ we have the critical simplices $2\oplus1$ and $1\oplus2$ if we do not match anything. Now we assume $n>3$ and proceed by induction.
+
+We define an order-preserving map:
+\begin{eqnarray*}
+\varphi:{\cal F}(\Delta(\Pi_{n,2})/S_1\times S_{n-1})&\longrightarrow&[0,1]\\
+\tau&\longmapsto&
+\begin{cases}
+1&\text{if $2\oplus 1^{n-2}\in V(\tau)$}\\
+0&\text{else}
+\end{cases}
+\end{eqnarray*}
+By Lemma 3.2 in \cite{donau} we already have an acyclic matching on $\varphi^{-1}(0)$ with one critical simplex which has dimension $0$. The next step is to find an acyclic matching on $\varphi^{-1}(1)$ and apply the Patchwork Theorem, see \cite[Chapter 11]{buch}.
+
+We define a map $\psi:{\cal F}(\Delta(\Pi_{n-1,2})/S_1\times S_{n-2})\longrightarrow\varphi^{-1}(1)\setminus\{2\oplus 1^{n-2}\}$, which increases the number on the left side by $1$ on each level and appends the vertex $2\oplus 1^{n-2}$ at the bottom of the forest. The map $\psi$ is an isomorphism between posets, see Lemma 4.1 in \cite{donau}, and $\psi$ induces an acyclic matching on $\varphi^{-1}(1)$ where the set of critical simplices consists of one simplex $\alpha$ of dimension $1$, the simplex that has only the vertex $2\oplus 1^{n-2}$ and the unique simplex $\sigma_n$ with the vertices $v_0\oplus 1^{n-v_0}$ with $v_0=2,\dots,n$ by induction hypothesis. Finally we match $2\oplus 1^{n-2}$ with $\alpha$.
+\end{proof}
+It is clear that $H^{n-3}(\Delta(\Pi_{n,2})/S_1\times S_{n-1})$ is generated by an element that is represented by a function $C_{n-3}(\Delta(\Pi_{n,2})/S_1\times S_{n-1})\longrightarrow\Z$ that maps the simplex $\sigma_n$ to $1$ and any other simplex of dimension $n-3$ to $0$. Furthermore, since $\sigma_n$ is also a simplex of $\Delta_{n,2}$, $H^{n-3}(\Delta_{n,2})$ is generated by the class of a function $\delta_{\sigma_n}:C_{n-3}(\Delta_{n,2})\longrightarrow\Z$ that maps $\sigma_n$ to $1$ and any other simplex to $0$.
+
+Via the map in the proof of Lemma \ref{trispiso} we obtain the unique simplex $\sigma_{n,k}$ of dimension $l$ with the vertices $v_0\oplus 1^{n-v_0}$ with $v_0=2,\dots,n-1$ and $v_0\equiv 0,1\mod k$, such that $\{[\delta_{\sigma_{n,k}}]\}$ is a basis of the free group $H^l(\Delta_{n,k})$. $[\delta_{\sigma_{n,k}}]$ denotes the class of $\delta_{\sigma_{n,k}}$.
+\begin{prop}
+The set $\{[\rho_{n,k}]\}$ is a basis of the free group $H^l(\Delta(\Pi_{n,k})/S_1\times S_{n-1})$.
+\end{prop}
+\begin{proof}
+By Lemma \ref{cocycle}, $\rho_{n,k}$ is a cocycle. The homomorphism $\rho_{n,k}$ is not a coboundary by the following argument: Assume there exists $g\in C^{l-1}$ with $\rho_{n,k}=\partial^*g$. If we restrict $\rho_{n,k}$ to $\Delta_{n,k}$, this implies $\sigma_{n_k}=\partial^*\widetilde g$, where $\widetilde g$ is the restriction of $g$ to $\Delta_{n,k}$. It remains to show that $\rho_{n,k}$ is a generator. Assume there exists $f\in\hom(C_l,\Z)$ such that $[\rho_{n,k}]=k[f]$ with $k>1$. Again we restrict to $\Delta_{n,k}$ and obtain $[\sigma_{n,k}]=k[\widetilde f]$. By the discussion above this is a contradiction.
+\end{proof}
+%\section*{Acknowledgements}
+%The author would like to thank ...
+\bibliographystyle{model1-num-names}
+\begin{thebibliography}{00}
+\bibitem{bjoern}
+A. Bj\"orner, \textit{Matroid Applications}, Cambridge University Press, 1992.
+\bibitem{donau}
+R. Donau, \textit{Quotients of the order complex $\Delta(\overline{\Pi}_n)$ by subgroups of the Young subgroup $S_1\times S_{n-1}$}, Topology and its Applications \textbf{157} (16) (2010), pp. 2476-2479.
+\bibitem{forman}
+R. Forman, \textit{Morse theory for cell complexes}, Adv. Math. \textbf{134} (1) (1998), pp. 90-145.
+\bibitem{hatcher}
+A. Hatcher, \textit{Algebraic Topology}, Cambridge University Press, 2008.
+\bibitem{clmap}
+D.N. Kozlov, \textit{Closure maps on regular trisps}, Topology and its Applications \textbf{156} (15) (2009), pp. 2491-2495.
+\bibitem{kozthm}
+D.N. Kozlov, \textit{Collapsibility of $\Delta(\Pi_n)/S_n$ and some related CW complexes}, Proc. Amer. Math. Soc. \textbf{128} (8) (2000), pp. 2253-2259.
+\bibitem{buch}
+D.N. Kozlov, \textit{Combinatorial Algebraic Topology}, Algorithms and Computation in Mathematics \textbf{21}, Springer-Verlag Berlin Heidelberg, 2008.
+\end{thebibliography}
+\end{document}

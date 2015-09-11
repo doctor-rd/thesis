@@ -1,0 +1,179 @@
+\documentclass{elsarticle}
+\usepackage{amsmath,amsthm}
+\usepackage{bbm}
+%\usepackage[all,cmtip]{xy}
+\newtheorem{df}{Definition}[section]
+\newtheorem{prop}[df]{Proposition}
+\newtheorem{lem}[df]{Lemma}
+\newtheorem{thm}[df]{Theorem}
+\newtheorem{cor}[df]{Corollary}
+%\def\N{\mathbbm N}
+\def\id{\textrm{id}}
+\def\Z{\mathbbm Z}
+\def\C{\mathbbm C}
+\journal{Topology and its Applications}
+\begin{document}
+\begin{frontmatter}
+\title{Quotients of the order complex $\Delta(\overline{\Pi}_n)$ by subgroups of the Young subgroup $S_1\times S_{n-1}$}
+\author[ruelle]{Ralf Donau}
+\address[ruelle]{Fachbereich Mathematik, Universit\"at Bremen, 28359 Bremen, Germany}
+\ead{ruelle@math.uni-bremen.de}
+\begin{abstract}
+In this paper we prove that the space $\Delta(\overline{\Pi}_n)/G$ is homotopy equivalent to a wedge of spheres of dimension $n-3$ for all natural numbers $n\geq 3$ and all subgroups $G\subset S_1\times S_{n-1}$. Our argument makes use of Discrete Morse Theory. Furthermore we find a simple formula to compute the number of spheres. For example $\Delta(\overline{\Pi}_n)/S_1\times S_{n-1}$ is homotopy equivalent to a sphere.
+\end{abstract}
+\begin{keyword}
+Discrete Morse Theory\sep regular trisp\sep partial matching\sep acyclic matching\sep Young subgroup
+\end{keyword}
+\end{frontmatter}
+\section{Introduction}
+Let $n\geq 3$ and let $\Pi_n$ denote the poset consisting of all partitions of $[n]:=\{1,\dots,n\}$ ordered by refinement, such that the finer partition is the smaller partition. Let $\overline{\Pi}_n$ denote the poset obtained from $\Pi_n$ by removing both the smallest and greatest element, which are $\{\{1\},\dots,\{n\}\}$ and $\{[n]\}$, respectively. Now we define $\Delta(\overline{\Pi}_n)$ to the nerve of the acyclic category $\overline{\Pi}_n$, which is a regular trisp, see \cite[Chapter 10]{buch}.
+
+It is well-known that $\Delta(\overline{\Pi}_n)$ is homotopy equivalent to a wedge of spheres of dimension $n-3$. This result has applications in arrangement theory, since the intersection lattice of a linear braid arrangement in isomorphic to a partition lattice $\Pi_n$, see \cite{braid1}, \cite{braid2}. The following theorem is the first result concerning the topology of the quotient $\Delta(\overline{\Pi}_n)/G$, where $G$ is a non-trivial subgroup of $S_n$. This and related facts have implications in singularity theory, see \cite{sing1}, \cite{sing2}, \cite{sing3}.
+\begin{thm}[Kozlov,\cite{clmap}] % p. 198
+For any $n\geq 3$, the space $\Delta(\overline{\Pi}_n)/S_n$ is contractible.
+\end{thm}
+This leads to a general question of determining the homotopy type of $\Delta(\overline{\Pi}_n)/G$ for an arbitrary subgroup $G\subset S_n$. The subgroups which would be especially interesting to consider are the Young subgroups, written as $S_{k_1}\times S_{k_2}\times\dots\times S_{k_r}$ with $k_1+k_2+\dots+k_r=n$.
+
+In this paper we give an answer for all Young subgroups that fix the element $1$, which are of the form $S_1\times S_{k_1}\times\dots\times S_{k_r}$, as a corollary of the more general Proposition \ref{rdthm}. An instance, which we have not yet solved completely, are Young subgroups of the form $S_k\times S_{n-k}$. However, we have computed the first homology with integer coefficients, obtaining the result $H_1(\Delta(\overline{\Pi}_n)/S_k\times S_{n-k};\Z)\cong 0$ for $n\geq 5$.
+\section{Discrete Morse Theory}
+The definitions of regular trisps, partial matchings, acyclic matchings and foundations of Discrete Morse Theory can be found in \cite{forman}, \cite{clmap} and \cite{buch}. The following two theorems of Discrete Morse Theory are frequently used in our proofs. We also make use of the results in \cite{clmap}.
+\begin{thm}[Patchwork Theorem]
+\label{patchwork}
+Let $\varphi:P\longrightarrow Q$ be an order-preserving map and assume we have acyclic matchings on the subposets $\varphi^{-1}(q)$ for all $q\in Q$. Then the union of these matchings is an acyclic matching on $P$.
+\end{thm}
+\begin{thm}%[Main Theorem of Discrete Morse Theory for CW Complexes]
+\label{morsemain}
+Let $\Delta$ be a regular trisp and let $M$ be an acyclic matching on the poset ${\cal F}(\Delta)\setminus\{\hat{0}\}$. Let $c_i$ denote the number of critical $i$-dimensional simplices of $\Delta$. Then:
+\begin{enumerate}
+\item If the critical simplices form a subcomplex $\Delta_c$ of $\Delta$, then $\Delta$ collapses onto $\Delta_c$.
+\item $\Delta$ is homotopy equivalent to a CW complex with $c_i$ cells of dimension $i$.
+\end{enumerate}
+\end{thm}
+The proofs of Theorem \ref{patchwork} and \ref{morsemain} as well as further facts on Discrete Morse Theory can be found in \cite[Chapter 11]{buch}.
+\section{The collapsible subtrisp}
+\label{allgemein}
+Let $n\geq 3$ be a fixed natural number throughout this section. The symmetric group $S_n$ operates on $\Delta(\overline{\Pi}_n)$ in a natural way. In this paper we consider subgroups of the Young subgroup
+\[S_1\times S_{n-1}:=\{\sigma\in S_n\mid\sigma(1)=1\}\]
+We now consider the regular trisp $\Delta:=\Delta(\overline{\Pi}_n)/G$, where $G\subset S_1\times S_{n-1}$ is a subgroup. Let $\Delta^*$ be that subtrisp of $\Delta$ that we obtain by removing all vertices that are represented by some partition where the block containing $1$ has exactly two elements and any other block is singleton. This condition is independent of the choice of the representative. Such a representative can be written as
+\[
+v_k:=\{\{1,k\},\{2\},\dots,\widehat{\{k\}},\dots,\{n\}\}
+\]
+with $k\in\{2,\ldots, n\}$. The element with the hat above is omitted.
+
+Let $R$ be the set of all vertices of $\Delta^*$ where the block containing $1$ is singleton.
+\begin{lem}
+\label{simplclosure}
+There exists an acyclic matching on the poset ${\cal F}(\Delta^*)$ such that a simplex $\sigma\in{\cal F}(\Delta^*)$ is critical if and only if  $V(\sigma)\subset R$.
+\end{lem}
+\begin{proof}
+Let $B$ be the set of all vertices that are not contained in $R$. Now we define a closure map $\varphi:B\longrightarrow R$. Let $b\in B$ and let $\tilde b\in\overline{\Pi}_n$ be a representative of $b$. We modify the blocks in $\tilde b$ as follows. We replace the block $A$ containing $1$ by the two blocks $\{1\}$ and $A\setminus\{1\}$ and take the class of this new partition as $\varphi(b)$. By applying Corollary 2.5 in \cite{clmap} and Proposition 7 in \cite{jule} it is easy to see that this map is well-defined and a closure map\footnote{see Definition 2.1 in \cite{clmap}}. By Theorem 2.2 in \cite{clmap} we get an acyclic matching on ${\cal F}(\Delta^*)$ where a simplex $\sigma$ is critical if and only if  $V(\sigma)\subset R$.
+\end{proof}
+\begin{lem}
+\label{mitte}
+There exists an acyclic matching on ${\cal F}(\Delta^*)$ that has only one critical simplex which has dimension $0$. In particular $\Delta^*$ is collapsible.
+\end{lem}
+\begin{proof}
+We define an order-preserving map
+\begin{eqnarray*}
+\varphi:{\cal F}(\Delta^*)&\longrightarrow&[0,1]\\
+\sigma&\longmapsto&
+\begin{cases}
+0&\text{if $V(\sigma)\subset R$}\\
+1&\text{else}
+\end{cases}
+\end{eqnarray*}
+By Lemma \ref{simplclosure} we already have an acyclic matching on $\varphi^{-1}(1)$ with no critical simplices. Now we define an acyclic matching on $\varphi^{-1}(0)$. Let $\alpha$ be the vertex that is represented by the partition $\{\{1\},\{2,\dots,n\}\}$. Let $\sigma$ be a simplex of $\varphi^{-1}(0)$ with $V(\sigma)\not=\{\alpha\}$. It is clear that $\alpha$ can be either deleted from $\sigma$ or uniquely inserted into $\sigma$. The matching rule therefore is the following: add $\alpha$ to a simplex if it is not already there, otherwise remove it. This matching is acyclic, since this rule can be formulated by a closure map that maps each vertex that does not equal $\alpha$ to $\alpha$. We apply Theorem \ref{patchwork} and obtain an acyclic matching on ${\cal F}(\Delta^*)$ that has only one critical simplex; the simplex that has only the vertex $\alpha$. Theorem \ref{morsemain} tells us that $\Delta^*$ is collapsible.
+\end{proof}
+What about the remaining simplices that are represented by a chain that contains a $v_k$ with $k\in\{2,\ldots, n\}$? Let $V_G$ be the set of all these special vertices. We define a Poset $P_G:=V_G\cup\{0\}$ such that $0$ is the smallest element of $P_G$ and the only element that is comparable with some other element. That means $x,y\in P_G$, $x<y$ implies $x=0$. We define an order-preserving map $\varphi_G:{\cal F}(\Delta)\longrightarrow P_G$ as follows. Let $\sigma\in{\cal F}(\Delta)$, then we map $\sigma$ to $0$ if $\sigma\in{\cal F}(\Delta^*)$. Otherwise we map $\sigma$ to the special vertex of $V_G$ that belongs to $\sigma$, which is unique. By Lemma \ref{mitte} we already have an acyclic matching on $\varphi_G^{-1}(0)$ with one critical cell which has dimension $0$. The next step would be to find acyclic matchings on $\varphi_G^{-1}(v)$ for all $v\in V_G$ and apply Theorem \ref{patchwork}.
+\section{The main result}
+Let $n\geq 4$, for each $2\leq k\leq n$ we define the embedding $i_k:S_1\times S_{n-2}\longrightarrow S_1\times S_{n-1}$, where
+\begin{eqnarray*}
+i_k(\sigma):[n]&\longrightarrow&[n]\\
+x&\longmapsto&
+\begin{cases}
+k&\text{if $x=k$}\\
+f_k\circ\sigma\circ f_k^{-1}(x)&\text{else}\\
+\end{cases}
+\end{eqnarray*}
+and $f_k$ is the order-preserving bijection $f_k:[n-1]\longrightarrow[n]\setminus\{k\}$. Notice that $\sigma(1)=1$ and hence $i_k(\sigma)(1)=1$. The image of $i_k$ consists of all permutations $\sigma\in S_1\times S_{n-1}$ with $\sigma(k)=k$. It also easy to see that $i_k$ is injective.
+\begin{lem}
+\label{indlemma}
+Let $n\geq 4$ and $G\subset S_1\times S_{n-1}$ be an arbitrary subgroup. Let $2\leq k\leq n$ and assume we have an acyclic matching on ${\cal F}(\Delta(\overline{\Pi}_{n-1})/i_k^{-1}(G))$, where the set of critical simplices consists of one critical simplex of dimension $0$ and $l$ critical simplices of dimension $d$, where $l,d\geq 0$. Let $v\in V_G$ be the vertex that is represented by $v_k$. Then there exists an acyclic matching on $\varphi_G^{-1}(v)$ such that the set of critical simplices consists of $l$ critical simplices of dimension $d+1$.
+\end{lem}
+\begin{proof}
+We define a map
+\[
+\psi:{\cal F}(\Delta(\overline{\Pi}_{n-1})/i_k^{-1}(G))\longrightarrow\varphi_G^{-1}(v)\setminus\{v\}
+\]
+as follows. Let $\sigma\in{\cal F}(\Delta(\overline{\Pi}_{n-1})/i_k^{-1}(G))$ be a simplex, then we choose a representative $\tilde\sigma\in{\cal F}(\Delta(\overline{\Pi}_{n-1}))$ and describe what happens to the vertices of $\tilde\sigma$, which are partitions of the set $[n-1]$. Let $p=\{B_1,B_2,\dots,B_r\}$, where $B_1$ is the block that contains $1$, be a partition in the chain $\tilde\sigma$. For $p$ we define $p^*:=\{f_k(B_1)\cup\{k\},f_k(B_2),\dots,f_k(B_r)\}$, which is a partition of set set $[n]$. $\tilde\sigma$ can be written as
+\[
+\tilde\sigma=(p_1<\ldots<p_t)
+\]
+We define $\psi(\sigma)$ as the simplex that is represented by the chain $(v_k<p^*_1<\ldots<p^*_t)$.
+
+This map is well-defined, for: Let $(p_1<\ldots<p_t)$ and $(p'_1<\ldots<p'_t)$ be two representatives. That means there exists $g\in i_k^{-1}(G)$ with $p'_i=gp_i$ for all $i\in[t]$. Assume $i\in[t]$, $p_i$ can be written as $p_i=\{B_1,B_2,\dots,B_r\}$ with $1\in B_1$, then we also have $p'_i=\{g(B_1),g(B_2),\dots,g(B_r)\}$ with $1\in g(B_1)$. For $1<j\leq r$ we have $f_k(g(B_j))=i_k(g)(f_k(B_j))$. It also follows $f_k(g(B_1))\cup\{k\}=i_k(g)(f_k(B_1)\cup\{k\})$, since $i_k(g)(k)=k$. Therefore $i_k(g)$ gives us our relation. It is easy to see that $\psi$ is order-preserving.
+
+$\psi$ has an inverse
+\[
+\psi^{-1}:\varphi_G^{-1}(v)\setminus\{v\}\longrightarrow{\cal F}(\Delta(\overline{\Pi}_{n-1})/i_k^{-1}(G))
+\]
+that maps a $\sigma\in\varphi_G^{-1}(v)\setminus\{v\}$ as follows. The smallest vertex of $\sigma$ is $v$, we choose a representative $\tilde\sigma=(v_k<p_1<\ldots<p_t)\in{\cal F}(\Delta(\overline{\Pi}_n))$ such that $v_k$ is the smallest partition in the chain $\tilde\sigma$. Let $p=\{B_1,B_2,\dots,B_r\}$, where $B_1$ is the block that contains $1$, be a partition in $\tilde\sigma$. In particular we have $k\in B_1$, since $v_k$ refines any partition in $\tilde\sigma$. For $p$ we define the partition $p^*:=\{f_k^{-1}(B_1\setminus\{k\}),f_k^{-1}(B_2),\dots,f_k^{-1}(B_r)\}$. We define $\psi^{-1}(\sigma)$ as the simplex that is represented by $(p^*_1<\ldots<p^*_t)$.
+
+$\psi^{-1}$ is well-defined, for: Let $(v_k<p_1<\ldots<p_t)$ and $(v_k<p'_1<\ldots<p'_t)$ be two representatives. That means there exists $g\in G$ with $p'_i=gp_i$ for all $i\in[t]$. Clearly we have $g(1)=1$ and $g(k)=k$, and therefore $g$ lies in the image of $i_k$. $i_k^{-1}(g)$ gives us the relation we are looking for. It is easy to see that $\psi^{-1}$ is order-preserving and the inverse of $\psi$.
+
+Via $\psi$ we get an acyclic matching on $\varphi_G^{-1}(v)$ that has $l$ critical simplices of dimension $d+1$, one critical simplex $\tau$ of dimension $1$, and additionally we have the critical simplex that has only the vertex $v$. Finally we match $v$ with $\tau$ and this matching is acyclic since $v$ is the smallest element of $\varphi_G^{-1}(v)$.
+\end{proof}
+\begin{prop}
+\label{rdthm}
+Let $n\geq3$ and $G\subset S_1\times S_{n-1}$ be a subgroup, then the topological space $\Delta(\overline{\Pi}_n)/G$ is homotopy equivalent to a wedge of spheres of dimension $n-3$.
+\end{prop}
+\begin{proof}
+We show there exists an acyclic matching on the poset ${\cal F}(\Delta(\overline{\Pi}_n)/G)$, where the set of critical simplices consists of one critical simplex of dimension $0$ and the other critical simplices have dimension $n-3$. Then we can apply Theorem \ref{morsemain}.
+
+For $n=3$ we have the cases $G=S_1\times S_2$ and $G=\{\id_{[3]}\}$, hence $\Delta(\overline{\Pi}_n)/G$ consists of two or three points. We do not match anything and get an acyclic matching with one critical simplex of dimension $0$ and another one or two critical simplices of dimension $0$. Now we assume $n>3$ and proceed by induction.
+
+By the discussion at the end of section \ref{allgemein} it remains to show that there exists an acyclic matching on $\varphi_G^{-1}(v)$ for each $v\in V_G$ such that all critical simplices have dimension $n-3$. Let $v\in V_G$, then we choose a $2\leq k\leq n$ such that $v_k$ is a representative of $v$. By induction hypothesis we have an acyclic matching on $\Delta(\overline{\Pi}_{n-1})/i_k^{-1}(G)$ which has one critical simplex of dimension $0$ and critical simplices of dimension $n-4$. We apply Lemma \ref{indlemma} and get our acyclic matching on $\varphi_G^{-1}(v)$.
+\end{proof}
+\section{Counting spheres}
+\label{giacomo}
+We are now interested in the number of spheres we have. This can be computed either by looking into the proof of Proposition \ref{rdthm} or by determining the Betti Number $\beta_{n-3}(\Delta(\overline{\Pi}_n)/G)$, which is the dimension of $H_{n-3}(\Delta(\overline{\Pi}_n)/G;\C)$.
+
+The action of $S_1\times S_{n-1}$ on $\Delta(\overline{\Pi}_n)$ induces an action on $H_{n-3}(\Delta(\overline{\Pi}_n);\C)$. By applying Corollary 3.3 in \cite{emk} and Theorem 1.5 in \cite{white} we know that $H_{n-3}(\Delta(\overline{\Pi}_n);\C)$ and
+\[\C\cdot(S_1\times S_{n-1})=\bigoplus_{\sigma\in S_1\times S_{n-1}}\C\cdot\sigma\]
+are isomorphic as $(S_1\times S_{n-1})$-modules. The Transfer Theorem tells us
+\[
+H_{n-3}(\Delta(\overline{\Pi}_n)/G;\C)\cong H_{n-3}(\Delta(\overline{\Pi}_n);\C)^G\cong(\C\cdot(S_1\times S_{n-1}))^G
+\]
+The dimension of $(\C\cdot(S_1\times S_{n-1}))^G$ is the index of $G$ in $S_1\times S_{n-1}$. Hence we obtain the following result: $\Delta(\overline{\Pi}_n)/G$ is homotopy equivalent to a wedge of $k$ spheres of dimension $n-3$, where $k$ is the index of $G$ in $S_1\times S_{n-1}$.
+\section*{Acknowledgments}
+The author would like to thank Dmitry N. Feichtner-Kozlov for this interesting problem and the support of this work, Juliane Lehmann for the helpful discussions and Giacomo d'Antonio for the hint that led to an improvement of section \ref{giacomo}.
+\bibliographystyle{model1-num-names}
+\begin{thebibliography}{00}
+\bibitem{transfer}
+G.E. Bredon, \textit{Introduction to compact transformation groups}, Pure and applied mathematics \textbf{46}, Chapter III, Academic Press, 1972.
+\bibitem{emk}
+E.M. Feichtner, \textit{Complexes of trees and nested set complexes}, Pacific journal of mathematics \textbf{227} (2) (2006), pp. 271-286.
+\bibitem{forman}
+R. Forman, \textit{Morse theory for cell complexes}, Adv. Math. \textbf{134} (1) (1998), pp. 90-145.
+\bibitem{braid1}
+M. Goresky, R. MacPherson, \textit{Stratified Morse theory}, Springer-Verlag, Berlin Heidelberg New York, 1988.
+\bibitem{hatcher}
+A. Hatcher, \textit{Algebraic Topology}, Chapter 2, Cambridge University Press, 2008.
+\bibitem{clmap}
+D.N. Kozlov, \textit{Closure maps on regular trisps}, Topology and its Applications \textbf{156} (15) (2009), pp. 2491-2495.
+\bibitem{buch}
+D.N. Kozlov, \textit{Combinatorial Algebraic Topology}, Algorithms and Computation in Mathematics \textbf{21}, Springer-Verlag Berlin Heidelberg, 2008.
+\bibitem{sing1}
+D.N. Kozlov, \textit{Topology of spaces of hyperbolic polynomials and combinatorics of resonances}, Israel Journal of Mathematics \textbf{132} (2002), pp. 189-206.
+\bibitem{sing2}
+D.N. Kozlov, \textit{Rational homology of spaces of complex monic polynomials with multiple roots}, Mathematika  \textbf{49} (2002), pp. 77-91.
+\bibitem{jule}
+J. Lehmann, \textit{Equivariant closure operators and trisp closure maps}, Topology and its Applications \textbf{157} (7) (2010), pp. 1195-1201.
+\bibitem{braid2}
+P. Orlik, H. Terao, \textit{Arrangements of Hyperplanes}, A Series of Comprehensive Studies in Mathematics \textbf{300}, Springer-Verlag, 1992.
+\bibitem{white}
+A. Robinson, S. Whitehouse, \textit{The tree representation of $\Sigma_{n+1}$}, Journal of Pure and Applied Algebra \textbf{111} (1996), pp. 245-253.
+\bibitem{sing3}
+V.A. Vassiliev, \textit{Complements of Discriminants of Smooth Maps: Topology and its Applications}, Translations of Mathematical Monographs \textbf{98}, American Mathematical Society, 1994.
+\end{thebibliography}
+\end{document}
