@@ -70,7 +70,7 @@ The simplices of $\Delta(\Pi_{n,k})/S_1\times S_{n-1}$ are represented by sequen
 \begin{figure}[ht]
 \centering
 \input{forest.pdf_t} 
-\caption{A simplex of $\Delta(\Pi_{6,3})/S_1\times S_5$. One number is distinguished on each level.}
+\caption{A simplex of $\Delta(\Pi_{6,2})/S_1\times S_5$. One number is distinguished on each level.}
 \end{figure}
 
 Let $\Delta_{n,k}$ denote the subtrisp of $\Delta(\Pi_{n,k})/S_1\times S_{n-1}$ where all vertices are indexed with number partitions of the type
@@ -125,7 +125,7 @@ We obtain the canonical bijection
 We also obtain a bijection between ${\cal F}(\Delta_{n_1,k_1})$ and ${\cal F}(\Delta_{n_2,k_2})$ as follows. Let $\sigma\in{\cal F}(\Delta_{n_1,k_1})$ be a simplex, which is a forest. First, we remove all $1$'s from the tree which are blocks on the right side. Second, on the right side we replace each $k_1$ by $k_2$, on the left side we replace $ak_1+b$ by $ak_2+b$. The last step is: We add $1$'s to each level such that the sum over all numbers is $n_2$ and such that they become children of those blocks which do not have enough children. The last step is well-defined. It is easy to see that $\varphi$ is a trisp isomorphism.
 \begin{figure}[ht]
 \centering
-\input{mapping.pdf_t} 
+\input{mapping_paper2.pdf_t}
 \caption{Example for the trisp isomorphism}
 \end{figure}
 \end{proof}
@@ -163,7 +163,7 @@ We consider the cochain complex of $\Delta$ at the $l$th position, see \cite[Sec
 \dots&\hom(C_{l+1},\Z)\ar[l]&\hom(C_l,\Z)\ar[l]_{\partial^*}&\hom(C_{l-1},\Z)\ar[l]_{\partial^{**}}&\dots\ar[l]
 }
 \]
-We give is a short description of $\partial^*$. Let $\tau$ be simplex of dimension $l+1$.
+We give a short description of $\partial^*$. Let $\tau$ be simplex of dimension $l+1$.
 \[
 (\partial^*f)(\tau)=\sum_{i=1}^{l+2}(-1)^{i+1}f(B_i(\tau))
 \]
