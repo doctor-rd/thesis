@@ -49,7 +49,7 @@ Let $\Delta$ be a regular trisp and let $M$ be an acyclic matching on the poset 
 \item $\Delta$ is homotopy equivalent to a CW complex with $c_i$ cells of dimension $i$.
 \end{enumerate}
 \end{thm}
-The proofs of Theorem \ref{patchwork} and \ref{morsemain} as well as further facts on Discrete Morse Theory can be found in \cite[Chapter 11]{buch}.
+The proofs of Theorems \ref{patchwork} and \ref{morsemain} as well as further facts on Discrete Morse Theory can be found in \cite[Chapter 11]{buch}.
 \section{The collapsible subtrisp}
 \label{allgemein}
 Let $n\geq 3$ be a fixed natural number throughout this section. The symmetric group $S_n$ operates on $\Delta(\overline{\Pi}_n)$ in a natural way. In this paper we consider subgroups of the Young subgroup
@@ -66,7 +66,7 @@ Let $R$ be the set of all vertices of $\Delta^*$ where the block containing $1$ 
 There exists an acyclic matching on the poset ${\cal F}(\Delta^*)$ such that a simplex $\sigma\in{\cal F}(\Delta^*)$ is critical if and only if  $V(\sigma)\subset R$.
 \end{lem}
 \begin{proof}
-Let $B$ be the set of all vertices that are not contained in $R$. Now we define a closure map $\varphi:B\longrightarrow R$. Let $b\in B$ and let $\tilde b\in\overline{\Pi}_n$ be a representative of $b$. We modify the blocks in $\tilde b$ as follows. We replace the block $A$ containing $1$ by the two blocks $\{1\}$ and $A\setminus\{1\}$ and take the class of this new partition as $\varphi(b)$. By applying Corollary 2.5 in \cite{clmap} and Proposition 7 in \cite{jule} it is easy to see that this map is well-defined and a closure map\footnote{see Definition 2.1 in \cite{clmap}}. By Theorem 2.2 in \cite{clmap} we get an acyclic matching on ${\cal F}(\Delta^*)$ where a simplex $\sigma$ is critical if and only if  $V(\sigma)\subset R$.
+Let $B$ be the set of all vertices that are not contained in $R$. Now we define a closure map $\varphi:B\longrightarrow R$. Let $b\in B$ and let $\tilde b\in\overline{\Pi}_n$ be a representative of $b$. We modify the blocks in $\tilde b$ as follows. We replace the block $A$ containing $1$ by the two blocks $\{1\}$ and $A\setminus\{1\}$ and take the class of this new partition as $\varphi(b)$. By applying Corollary 2.5 in \cite{clmap} and Proposition 7 in \cite{jule} it is easy to see that this map is well-defined and a closure map\footnote{See Definition 2.1 in \cite{clmap}}. By Theorem 2.2 in \cite{clmap} we get an acyclic matching on ${\cal F}(\Delta^*)$ where a simplex $\sigma$ is critical if and only if  $V(\sigma)\subset R$.
 \end{proof}
 \begin{lem}
 \label{mitte}
@@ -84,7 +84,7 @@ We define an order-preserving map
 \end{eqnarray*}
 By Lemma \ref{simplclosure} we already have an acyclic matching on $\varphi^{-1}(1)$ with no critical simplices. Now we define an acyclic matching on $\varphi^{-1}(0)$. Let $\alpha$ be the vertex that is represented by the partition $\{\{1\},\{2,\dots,n\}\}$. Let $\sigma$ be a simplex of $\varphi^{-1}(0)$ with $V(\sigma)\not=\{\alpha\}$. It is clear that $\alpha$ can be either deleted from $\sigma$ or uniquely inserted into $\sigma$. The matching rule therefore is the following: add $\alpha$ to a simplex if it is not already there, otherwise remove it. This matching is acyclic, since this rule can be formulated by a closure map that maps each vertex that does not equal $\alpha$ to $\alpha$. We apply Theorem \ref{patchwork} and obtain an acyclic matching on ${\cal F}(\Delta^*)$ that has only one critical simplex; the simplex that has only the vertex $\alpha$. Theorem \ref{morsemain} tells us that $\Delta^*$ is collapsible.
 \end{proof}
-What about the remaining simplices that are represented by a chain that contains a $v_k$ with $k\in\{2,\ldots, n\}$? Let $V_G$ be the set of all these special vertices. We define a Poset $P_G:=V_G\cup\{0\}$ such that $0$ is the smallest element of $P_G$ and the only element that is comparable with some other element. That means $x,y\in P_G$, $x<y$ implies $x=0$. We define an order-preserving map $\varphi_G:{\cal F}(\Delta)\longrightarrow P_G$ as follows. Let $\sigma\in{\cal F}(\Delta)$, then we map $\sigma$ to $0$ if $\sigma\in{\cal F}(\Delta^*)$. Otherwise we map $\sigma$ to the special vertex of $V_G$ that belongs to $\sigma$, which is unique. By Lemma \ref{mitte} we already have an acyclic matching on $\varphi_G^{-1}(0)$ with one critical cell which has dimension $0$. The next step would be to find acyclic matchings on $\varphi_G^{-1}(v)$ for all $v\in V_G$ and apply Theorem \ref{patchwork}.
+What about the remaining simplices that are represented by a chain that contains a $v_k$ with $k\in\{2,\ldots, n\}$? Let $V_G$ be the set of all these special vertices. We define a poset $P_G:=V_G\cup\{0\}$ such that $0$ is the smallest element of $P_G$ and the only element that is comparable with some other element. That means $x,y\in P_G$, $x<y$ implies $x=0$. We define an order-preserving map $\varphi_G:{\cal F}(\Delta)\longrightarrow P_G$ as follows. Let $\sigma\in{\cal F}(\Delta)$, then we map $\sigma$ to $0$ if $\sigma\in{\cal F}(\Delta^*)$. Otherwise we map $\sigma$ to the special vertex of $V_G$ that belongs to $\sigma$, which is unique. By Lemma \ref{mitte} we already have an acyclic matching on $\varphi_G^{-1}(0)$ with one critical cell which has dimension $0$. The next step would be to find acyclic matchings on $\varphi_G^{-1}(v)$ for all $v\in V_G$ and apply Theorem \ref{patchwork}.
 \section{The main result}
 Let $n\geq 4$, for each $2\leq k\leq n$ we define the embedding $i_k:S_1\times S_{n-2}\longrightarrow S_1\times S_{n-1}$, where
 \begin{eqnarray*}
@@ -105,7 +105,7 @@ We define a map
 \[
 \psi:{\cal F}(\Delta(\overline{\Pi}_{n-1})/i_k^{-1}(G))\longrightarrow\varphi_G^{-1}(v)\setminus\{v\}
 \]
-as follows. Let $\sigma\in{\cal F}(\Delta(\overline{\Pi}_{n-1})/i_k^{-1}(G))$ be a simplex, then we choose a representative $\tilde\sigma\in{\cal F}(\Delta(\overline{\Pi}_{n-1}))$ and describe what happens to the vertices of $\tilde\sigma$, which are partitions of the set $[n-1]$. Let $p=\{B_1,B_2,\dots,B_r\}$, where $B_1$ is the block that contains $1$, be a partition in the chain $\tilde\sigma$. For $p$ we define $p^*:=\{f_k(B_1)\cup\{k\},f_k(B_2),\dots,f_k(B_r)\}$, which is a partition of set set $[n]$. $\tilde\sigma$ can be written as
+as follows. Let $\sigma\in{\cal F}(\Delta(\overline{\Pi}_{n-1})/i_k^{-1}(G))$ be a simplex, then we choose a representative $\tilde\sigma\in{\cal F}(\Delta(\overline{\Pi}_{n-1}))$ and describe what happens to the vertices of $\tilde\sigma$, which are partitions of the set $[n-1]$. Let $p=\{B_1,B_2,\dots,B_r\}$, where $B_1$ is the block that contains $1$, be a partition in the chain $\tilde\sigma$. For $p$ we define $p^*:=\{f_k(B_1)\cup\{k\},f_k(B_2),\dots,f_k(B_r)\}$, which is a partition of the set $[n]$. $\tilde\sigma$ can be written as
 \[
 \tilde\sigma=(p_1<\ldots<p_t)
 \]
@@ -132,7 +132,7 @@ We show there exists an acyclic matching on the poset ${\cal F}(\Delta(\overline
 
 For $n=3$ we have the cases $G=S_1\times S_2$ and $G=\{\id_{[3]}\}$, hence $\Delta(\overline{\Pi}_n)/G$ consists of two or three points. We do not match anything and get an acyclic matching with one critical simplex of dimension $0$ and another one or two critical simplices of dimension $0$. Now we assume $n>3$ and proceed by induction.
 
-By the discussion at the end of section \ref{allgemein} it remains to show that there exists an acyclic matching on $\varphi_G^{-1}(v)$ for each $v\in V_G$ such that all critical simplices have dimension $n-3$. Let $v\in V_G$, then we choose a $2\leq k\leq n$ such that $v_k$ is a representative of $v$. By induction hypothesis we have an acyclic matching on $\Delta(\overline{\Pi}_{n-1})/i_k^{-1}(G)$ which has one critical simplex of dimension $0$ and critical simplices of dimension $n-4$. We apply Lemma \ref{indlemma} and get our acyclic matching on $\varphi_G^{-1}(v)$.
+By the discussion at the end of Section \ref{allgemein} it remains to show that there exists an acyclic matching on $\varphi_G^{-1}(v)$ for each $v\in V_G$ such that all critical simplices have dimension $n-3$. Let $v\in V_G$, then we choose a $2\leq k\leq n$ such that $v_k$ is a representative of $v$. By induction hypothesis we have an acyclic matching on $\Delta(\overline{\Pi}_{n-1})/i_k^{-1}(G)$ which has one critical simplex of dimension $0$ and critical simplices of dimension $n-4$. We apply Lemma \ref{indlemma} and get our acyclic matching on $\varphi_G^{-1}(v)$.
 \end{proof}
 \section{Counting spheres}
 \label{giacomo}
@@ -140,13 +140,13 @@ We are now interested in the number of spheres we have. This can be computed eit
 
 The action of $S_1\times S_{n-1}$ on $\Delta(\overline{\Pi}_n)$ induces an action on $H_{n-3}(\Delta(\overline{\Pi}_n);\C)$. By applying Corollary 3.3 in \cite{emk} and Theorem 1.5 in \cite{white} we know that $H_{n-3}(\Delta(\overline{\Pi}_n);\C)$ and
 \[\C\cdot(S_1\times S_{n-1})=\bigoplus_{\sigma\in S_1\times S_{n-1}}\C\cdot\sigma\]
-are isomorphic as $(S_1\times S_{n-1})$-modules. The Transfer Theorem tells us
+are isomorphic as $(S_1\times S_{n-1})$-modules. The Transfer Theorem\footnote{See \cite{transfer}} tells us
 \[
 H_{n-3}(\Delta(\overline{\Pi}_n)/G;\C)\cong H_{n-3}(\Delta(\overline{\Pi}_n);\C)^G\cong(\C\cdot(S_1\times S_{n-1}))^G
 \]
 The dimension of $(\C\cdot(S_1\times S_{n-1}))^G$ is the index of $G$ in $S_1\times S_{n-1}$. Hence we obtain the following result: $\Delta(\overline{\Pi}_n)/G$ is homotopy equivalent to a wedge of $k$ spheres of dimension $n-3$, where $k$ is the index of $G$ in $S_1\times S_{n-1}$.
 \section*{Acknowledgments}
-The author would like to thank Dmitry N. Feichtner-Kozlov for this interesting problem and the support of this work, Juliane Lehmann for the helpful discussions and Giacomo d'Antonio for the hint that led to an improvement of section \ref{giacomo}.
+The author would like to thank Dmitry N. Feichtner-Kozlov for this interesting problem and the support of this work, Juliane Lehmann for the helpful discussions and Giacomo d'Antonio for the hint that led to an improvement of Section \ref{giacomo}.
 \bibliographystyle{model1-num-names}
 \begin{thebibliography}{00}
 \bibitem{transfer}
