@@ -1,0 +1,10 @@
+x
+\label{a}
+ \label{b}
+y
+  \label{b}
+z
+   \label{c} \label{invisible}
+w
+
+Evaluates one label per line!

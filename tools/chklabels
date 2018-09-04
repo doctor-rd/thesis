@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+
+import sys
+import re
+
+labels = []
+
+for line in sys.stdin:
+	if re.match( '.*\\\\label', line ):
+		label = re.search( '\\\\label{([^}]*)}', line ).group( 1 )
+		if label not in labels:
+			labels.append( label )
+			print label
+		else:
+			print '\033[1;31mERROR: duplicate label: \033[1;33m' + label + '\x1b[0m'
