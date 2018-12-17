@@ -51,7 +51,7 @@ Let $M$ be an $G$-equivariant acyclic matching on $P(C_*,\Omega)$ such that $w(b
 \begin{df}
 For $b\in C_n$ we define the $G$-subcomplex ${\cal A}(Gb)$ as follows.
 \[\dots\longrightarrow 0\longrightarrow\span(Gb)\overset{\partial^{Gb}_n}\longrightarrow\span(G\partial_n b)\longrightarrow 0\longrightarrow\dots\]
-$\partial^{Gb}_n$ denotes the restriction of $\partial_n$ to $\span(Gb)$, i.e. $\partial^{Gb}_n(x):=\partial_n(x)$.
+$\partial^{Gb}_n$ denotes the restriction of $\partial_n:C_n\longrightarrow C_{n-1}$ to $\span(Gb)$, i.e. $\partial^{Gb}_n(x):=\partial_n(x)$ for $x\in\span(Gb)$.
 \end{df}
 Notice that $\partial^{Gb}_n$ is surjective by construction.
 \begin{rem}
@@ -66,12 +66,11 @@ Let $(a,b)\in M$ be a matching pair, assume $b\in C_n$. Then $\partial^{Gb}_n$ i
 \begin{proof}
 We have to show that $\partial^{Gb}_n$ is injective. Assume $\partial_n(\sum_{b'\in Gb}\lambda_{b'}b')=0$. Then $0=k_a(\sum_{b'\in Gb}\lambda_{b'}\partial_nb')=\lambda_{b}k_a(\partial_nb)$, which implies $\lambda_b=0$, since $k_a(\partial_nb)$ is invertible. This implies $\lambda_{b'}=0$ for all $b'\in Gb$, since $\partial_n$ is a $G$-map.
 
-The composition ${\cal A}(Gb)\longrightarrow0\longrightarrow{\cal A}(Gb)$ is homotop to $\id:{\cal A}(Gb)\longrightarrow{\cal A}(Gb)$ via the $G$-chain homotopy
-\begin{eqnarray*}
-P:{\cal A}(Gb)&\longrightarrow&{\cal A}(Gb)\\
-x&\longmapsto&(\partial^{Gb}_n)^{-1}(x)\text{ for $x\in\span(G\partial_n b)$}\\
-x&\longmapsto&0\text{ else}
-\end{eqnarray*}
+The composition ${\cal A}(Gb)\longrightarrow0\longrightarrow{\cal A}(Gb)$ is homotop to $\id:{\cal A}(Gb)\longrightarrow{\cal A}(Gb)$ via the $G$-chain homotopy $P=(P_i)$, where
+\begin{itemize}
+\item $P_{n-1}:=(\partial^{Gb}_n)^{-1}$
+\item $P_i:\equiv 0$ for $i\not=n-1$
+\end{itemize}
 On the other hand $0\longrightarrow{\cal A}(Gb)\longrightarrow 0$ equals $\id:0\longrightarrow 0$. Hence ${\cal A}(Gb)$ is $G$-homotopy equivalent to the zero complex.
 \end{proof}
 \begin{prop}
@@ -153,7 +152,6 @@ We have $\widetilde k_{f_{n-1}(a)}(\partial_n f_n(b'))=\widetilde k_{f_n(b)}(f_n
 
 We obtain the following two $G$-subcomplexes ${\cal A}(Gb)$ and $C_*^{Gb}$:
 \[\dots\longrightarrow 0\longrightarrow\span(Gb)\overset{\partial_n^{Gb}}\longrightarrow\span(Gf_{n-1}(a))\longrightarrow 0\longrightarrow\dots\]
-
 \[\dots\longrightarrow C_{n+1}\overset{\partial_{n+1}}\longrightarrow\span(\Omega_n^{Gb})\overset{\partial_n}\longrightarrow\span(\Omega_{n-1}^{Gb})\overset{\partial_{n-1}}\longrightarrow C_{n-2}\longrightarrow\dots\]
 
 Clearly we have $C_*\cong_G C_*^{Gb}\oplus{\cal A}(Gb)$. Furthermore $C_*^{Gb}$ is a free $G$-chain complex with $G$-basis $\Omega^{Gb}$, which is obtained from $\Omega$ by replacing $\Omega_n$ and $\Omega_{n-1}$ by $\Omega_n^{Gb}$ and $\Omega_{n-1}^{Gb}$ respectively.
