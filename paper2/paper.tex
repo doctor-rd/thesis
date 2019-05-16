@@ -53,7 +53,7 @@ For a trisp $\Delta$ we denote the face poset by ${\cal F}(\Delta)$ and by $V(\D
 
 Let $\Delta$ be a regular trisp whose set of vertices is divided into two disjoint parts $B\cup R$. We call the vertices of $B$ the \emph{blue} vertices and the vertices of $R$ the \emph{red} vertices. Let $\Delta^R$ be the subtrisp of $\Delta$ that contains all simplices $\sigma\in{\cal F}(\Delta^R)$ with $V(\sigma)\subset R$. For $\sigma\in{\cal F}(\Delta)\setminus{\cal F}(\Delta^R)$ let $m(\sigma)$ denote the smallest blue vertex of $\sigma$.
 \begin{df}
-A map $\varphi:B\longrightarrow R$ is called a \emph{closure map} if for any $\sigma\in{\cal F}(\Delta)\setminus{\cal F}(\Delta^R)$ either $m(\sigma)\in V(\sigma)$ or $m(\sigma)$ can be uniquely inserted into $\sigma$, i.e. there exists a unique simplex $\tau\in{\cal F}(\Delta)$ with $m(\sigma)\in V(\tau)$ and $\sigma$ is a subsimplex of $\tau$ with $\dim\tau=\dim\sigma+1$.
+A map $\varphi:B\longrightarrow R$ is called a \emph{closure map} if for any $\sigma\in{\cal F}(\Delta)\setminus{\cal F}(\Delta^R)$ either $\varphi(m(\sigma))\in V(\sigma)$ or $\varphi(m(\sigma))$ can be uniquely inserted into $\sigma$, i.e. there exists a unique simplex $\tau\in{\cal F}(\Delta)$ with $\varphi(m(\sigma))\in V(\tau)$ and $\sigma$ is a subsimplex of $\tau$ with $\dim\tau=\dim\sigma+1$.
 \end{df}
 \begin{thm}[Kozlov \cite{clmap}]
 \label{clthm}
