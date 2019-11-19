@@ -4,7 +4,7 @@ clmap: paper.tex
 	sed -n 54,61p paper.tex > clmap
 
 main: paper.tex main.patch
-	sed -n 66,226p paper.tex > main
+	sed -n 66,229p paper.tex > main
 	patch main main.patch
 
 dummy:
