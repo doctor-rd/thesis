@@ -13,4 +13,4 @@
 136c136
 < This proof may be considered as a simplified version of the proof of Proposition 4.2 in \cite{donau}. Lemma \ref{nicematching} implies Theorem \ref{rdthm} by the Main Theorem of Discrete Morse Theory\footnote{See \cite[Chapter 11]{buch}}.
 ---
-> This proof may be considered as a simplified version of the proof of Proposition \ref{rdthm}. Lemma \ref{nicematching} implies Theorem \ref{rdthm} by applying Theorem \ref{morsemain}.
+> This proof may be considered as a simplified version of the proof of Proposition \ref{rdthm} for the special case $G=S_1\times S_{n-1}$.
