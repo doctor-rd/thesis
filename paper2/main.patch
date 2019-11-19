@@ -1,0 +1,16 @@
+1c1
+< \section{The main result}
+---
+> \subsection{The main result}
+29c29
+< Apply Lemma \ref{erste_closure} and Theorem \ref{rdthm}.
+---
+> Apply Lemma \ref{erste_closure} and Proposition \ref{rdthm}.
+83c83
+< \section{A basis of the cohomology}
+---
+> \subsection{A basis of the cohomology}
+136c136
+< This proof may be considered as a simplified version of the proof of Proposition 4.2 in \cite{donau}. Lemma \ref{nicematching} implies Theorem \ref{rdthm} by the Main Theorem of Discrete Morse Theory\footnote{See \cite[Chapter 11]{buch}}.
+---
+> This proof may be considered as a simplified version of the proof of Proposition \ref{rdthm}. Lemma \ref{nicematching} implies Theorem \ref{rdthm} by applying Theorem \ref{morsemain}.

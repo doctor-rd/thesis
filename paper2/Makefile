@@ -3,8 +3,9 @@ extract: clmap main
 clmap: paper.tex
 	sed -n 54,61p paper.tex > clmap
 
-main: paper.tex
-	sed -n 66,226p paper.tex | sed "s/\\\\section/\\\\subsection/" > main
+main: paper.tex main.patch
+	sed -n 66,226p paper.tex > main
+	patch main main.patch
 
 dummy:
 	echo DUMMY paper2/clmap > clmap
