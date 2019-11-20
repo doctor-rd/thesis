@@ -6,8 +6,9 @@ patchwork: equivariant.tex
 main1: equivariant.tex
 	sed -n 67,89p equivariant.tex > main1
 
-quotmatching: equivariant.tex
+quotmatching: equivariant.tex quotmatching.patch
 	sed -n 90,93p equivariant.tex > quotmatching
+	patch quotmatching quotmatching.patch
 
 main2: equivariant.tex
 	sed -n 99,142p equivariant.tex > main2

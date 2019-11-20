@@ -1,0 +1,4 @@
+4a5,7
+> \begin{proof}
+> Assume we have a cycle in $M/H$. This cycle can be lifted to a path in $M$. Since $\Delta$ is finite and $G$ acts on such paths, we can easily construct a cycle in $M$.
+> \end{proof}
