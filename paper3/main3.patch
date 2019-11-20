@@ -1,0 +1,14 @@
+35c35
+< The proof of Lemma \ref{mitte} is the same as the proof of Lemma 3.2 in \cite{donau} for the case $G=\{\id_{[n]}\}$. It is easy to see that the acyclic matching, that is constructed in this proof, is $(S_1\times S_{n-1})$-equivariant.
+---
+> The proof of Lemma \ref{mitte} is the same as the proof of Lemma \ref{mitte_paper1} for the case $G=\{\id_{[n]}\}$. It is easy to see that the acyclic matching, that is constructed in this proof, is $(S_1\times S_{n-1})$-equivariant.
+46c46
+< as follows. We add $n$ to the block that contains $1$ in each partition and append $v_n$ to the bottom of the chain, see Figure \ref{exmapping}. The map $\psi$ is an isomorphism of posets. A similar definition of $\psi$ as well as a detailed description of its inverse can be found in the proof of Lemma 4.1 in \cite{donau}.
+---
+> as follows. We add $n$ to the block that contains $1$ in each partition and append $v_n$ to the bottom of the chain, see Figure \ref{exmapping}. The map $\psi$ is an isomorphism of posets. A similar definition of $\psi$ as well as a detailed description of its inverse can be found in the proof of Lemma \ref{indlemma}.
+75,76c75,76
+< A slightly different proof of the result in Example \ref{nicematchingex}, as well as a detailed description of $\Delta(\overline{\Pi}_n)/S_1\times S_{n-1}$, can be found in \cite{donau2}.
+< \section{Applications}
+---
+> The result in Example \ref{nicematchingex} was proven earlier in a different way, see Lemma \ref{nicematching}.
+> \subsection{Applications}
