@@ -1,4 +1,8 @@
-extract: clmap main
+extract: intro clmap main
+
+intro: paper.tex intro.patch
+	sed -n 34,37p paper.tex > intro
+	patch intro intro.patch
 
 clmap: paper.tex
 	sed -n 54,61p paper.tex > clmap
