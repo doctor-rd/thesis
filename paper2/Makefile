@@ -12,9 +12,11 @@ main: paper.tex main.patch
 	patch main main.patch
 
 dummy:
+	echo DUMMY paper2/intro > intro
 	echo DUMMY paper2/clmap > clmap
 	echo DUMMY paper2/main > main
 
 clean:
+	rm -f intro
 	rm -f clmap
 	rm -f main

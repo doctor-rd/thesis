@@ -1,7 +1,8 @@
 extract: coll main count
 
-coll: paper.tex
-	sed -n 57,87p paper.tex > coll
+coll: paper.tex coll.patch
+	sed -n 54,87p paper.tex > coll
+	patch coll coll.patch
 
 main: paper.tex
 	sed -n 89,136p paper.tex > main
