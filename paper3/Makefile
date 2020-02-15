@@ -14,7 +14,7 @@ main2: equivariant.tex
 	sed -n 99,142p equivariant.tex > main2
 
 main3: equivariant.tex main3.patch
-	sed -n 144,247p equivariant.tex > main3
+	sed -n 144,248p equivariant.tex > main3
 	patch main3 main3.patch
 
 dummy:
